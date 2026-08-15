@@ -41,6 +41,18 @@ Three AI agents, two contract documents, one pipeline: **Sales → Design → Bu
 - **Not another template site.** The system is conversion-first: every website defines a clear primary conversion and is designed for the specific business. Your demos feel intentional, not generic.
 - **Works with tools you already use.** Runs on [opencode](https://opencode.ai) — no enterprise stack, no license fees, no vendor lock-in. Open source under MIT.
 
+## What Webeloper is not
+
+Webeloper is not:
+
+- an automatic website generator;
+- a chatbot that replaces an agency;
+- a web framework;
+- a system that decides for you;
+- a set of prompts to copy and paste.
+
+It is a multi-agent work process with defined roles, explicit contracts and human supervision.
+
 ## How it works
 
 ```
@@ -160,6 +172,18 @@ Tres agentes de IA, dos documentos de contrato, un pipeline: **Ventas → Diseñ
 - **Menos retrabajo, demos más rápido.** El diseñador produce una especificación tan detallada que el desarrollador la construye bien a la primera. Te ahorrás el loop de "no era lo que quería decir".
 - **No es otro sitio plantilla.** El sistema es conversion-first: cada web define una conversión primaria clara y se diseña para el negocio específico. Tus demos se sienten intencionales, no genéricas.
 - **Funciona con herramientas que ya usás.** Corre sobre [opencode](https://opencode.ai) — sin stack empresarial, sin licencias, sin vendor lock-in. Código abierto con MIT.
+
+## Lo que Webeloper no es
+
+Webeloper no es:
+
+- un generador automático de sitios;
+- un chatbot que reemplaza una agencia;
+- un framework web;
+- un sistema que decide por vos;
+- un conjunto de prompts para copiar y pegar.
+
+Es un proceso de trabajo multiagente con roles definidos, contratos explícitos y supervisión humana.
 
 ## Cómo funciona
 
