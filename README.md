@@ -34,7 +34,7 @@ Three AI agents, two contract documents, one pipeline: **Sales → Design → Bu
 
 ## What you get
 
-- **A real process, not a wildcard.** Every stage has a defined agent and a contract that is the single source of truth. No more chaos between "we talked" and "we deliver".
+- **A real process, not a wildcard.** Every stage has a defined agent and a contract that works as the source of truth for that stage. No more chaos between "we talked" and "we deliver".
 - **Context that survives.** Commercial context is captured in the `sales-contract.md`, handed off to design, and turned into a complete `project-contract.md` — nothing gets lost between stages.
 - **You stay in control.** Agents never contact a prospect without your approval, and they never invent facts. Hypotheses stay hypotheses. Prices, reviews and credentials stay real.
 - **Less rework, faster demos.** The designer produces a spec detailed enough that the developer builds it right the first time. You skip the "that's not what I meant" loop.
@@ -154,7 +154,7 @@ Tres agentes de IA, dos documentos de contrato, un pipeline: **Ventas → Diseñ
 
 ## Lo que obtenés
 
-- **Un proceso real, no un comodín.** Cada etapa tiene un agente definido y un contrato que es la única fuente de verdad. Se acabó el caos entre "hablamos" y "entregamos".
+- **Un proceso real, no un comodín.** Cada etapa tiene un agente definido y un contrato que funciona como fuente de verdad para esa etapa. Se acabó el caos entre "hablamos" y "entregamos".
 - **El contexto sobrevive.** El contexto comercial se captura en el `sales-contract.md`, se entrega a diseño y se convierte en un `project-contract.md` completo — nada se pierde entre etapas.
 - **Vos tenés el control.** Los agentes nunca contactan a un prospecto sin tu aprobación, y nunca inventan hechos. Las hipótesis siguen siendo hipótesis. Los precios, reseñas y credenciales siguen siendo reales.
 - **Menos retrabajo, demos más rápido.** El diseñador produce una especificación tan detallada que el desarrollador la construye bien a la primera. Te ahorrás el loop de "no era lo que quería decir".
