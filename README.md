@@ -36,7 +36,7 @@ Three AI agents, two contract documents, one pipeline: **Sales → Design → Bu
 
 - **A real process, not a wildcard.** Every stage has a defined agent and a contract that works as the source of truth for that stage. No more chaos between "we talked" and "we deliver".
 - **Context that survives.** Commercial context is captured in the `sales-contract.md`, handed off to design, and turned into a complete `project-contract.md` — nothing gets lost between stages.
-- **You stay in control.** Agents never contact a prospect without your approval, and they never invent facts. Hypotheses stay hypotheses. Prices, reviews and credentials stay real.
+- **You stay in control.** Agents research, qualify and draft communications, but they never perform external outreach without human approval. Facts must be verifiable, and hypotheses remain explicitly hypotheses.
 - **Less rework, faster demos.** The designer produces a spec detailed enough that the developer builds it right the first time. You skip the "that's not what I meant" loop.
 - **Not another template site.** The system is conversion-first: every website defines a clear primary conversion and is designed for the specific business. Your demos feel intentional, not generic.
 - **Works with tools you already use.** Runs on [opencode](https://opencode.ai) — no enterprise stack, no license fees, no vendor lock-in. Open source under MIT.
@@ -156,7 +156,7 @@ Tres agentes de IA, dos documentos de contrato, un pipeline: **Ventas → Diseñ
 
 - **Un proceso real, no un comodín.** Cada etapa tiene un agente definido y un contrato que funciona como fuente de verdad para esa etapa. Se acabó el caos entre "hablamos" y "entregamos".
 - **El contexto sobrevive.** El contexto comercial se captura en el `sales-contract.md`, se entrega a diseño y se convierte en un `project-contract.md` completo — nada se pierde entre etapas.
-- **Vos tenés el control.** Los agentes nunca contactan a un prospecto sin tu aprobación, y nunca inventan hechos. Las hipótesis siguen siendo hipótesis. Los precios, reseñas y credenciales siguen siendo reales.
+- **Vos tenés el control.** Los agentes investigan, califican y redactan comunicaciones, pero nunca realizan outreach externo sin aprobación humana. Los hechos deben ser verificables y las hipótesis permanecen explícitamente como hipótesis.
 - **Menos retrabajo, demos más rápido.** El diseñador produce una especificación tan detallada que el desarrollador la construye bien a la primera. Te ahorrás el loop de "no era lo que quería decir".
 - **No es otro sitio plantilla.** El sistema es conversion-first: cada web define una conversión primaria clara y se diseña para el negocio específico. Tus demos se sienten intencionales, no genéricas.
 - **Funciona con herramientas que ya usás.** Corre sobre [opencode](https://opencode.ai) — sin stack empresarial, sin licencias, sin vendor lock-in. Código abierto con MIT.
