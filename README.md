@@ -4,23 +4,42 @@
 
 <h1 align="center">Webeloper</h1>
 
-> A multi-agent web agency pipeline: **Sales → Design → Build**, driven by two contracts.
-> Un pipeline multiagente de agencia web: **Ventas → Diseño → Desarrollo**, guiado por dos contratos.
+<p align="center">
+  <strong>From a sales chat to a client-ready website demo. With a process you control.</strong><br>
+  <em>De una conversación de ventas a una demo de web para tu cliente. Con un proceso que controlás.</em>
+</p>
 
 <p align="center">
   <a href="https://ko-fi.com/mrnandz"><img alt="Support me on Ko-fi" src="https://img.shields.io/badge/ko--fi-Support%20me-FF5E5B?logo=kofi&logoColor=white"></a>
   <a href="https://cafecito.app/mrnandz"><img alt="Invítame un cafecito" src="https://img.shields.io/badge/cafecito-Inv%C3%ADtame%20un%20cafecito-1E5FA8?logo=buy-me-a-coffee&logoColor=white"></a>
+  <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green">
 </p>
 
 ---
 
 # English
 
-## What is Webeloper?
+## Why Webeloper?
 
-Webeloper is a set of three specialized AI agents and two contract documents that encode the complete workflow of a web agency. Each agent has a clear role boundary, and each contract acts as the single source of truth for its stage of the process.
+If you build websites for clients — as a freelancer, an agency, or someone who uses AI to move faster — you already know how it usually goes:
 
-The system is designed for agencies and freelancers who want to turn a sales conversation into a client-facing website demo without losing control, inventing facts, or burning time on rework.
+- Sales conversations live in scattered chats and get lost the moment you switch to building.
+- The handoff between "what the client wants" and "what gets built" is where context dies.
+- AI agents help, but without guardrails they invent facts, go off-brief, and produce generic results.
+- Every project feels like starting from zero. There is no process. Just vibes and luck.
+
+Webeloper fixes that. It gives you a **repeatable process** for the whole lifecycle of a client website — from the first sales message to a finished demo — with clear roles, clear contracts, and you in control at every step.
+
+Three AI agents, two contract documents, one pipeline: **Sales → Design → Build**.
+
+## What you get
+
+- **A real process, not a wildcard.** Every stage has a defined agent and a contract that is the single source of truth. No more chaos between "we talked" and "we deliver".
+- **Context that survives.** Commercial context is captured in the `sales-contract.md`, handed off to design, and turned into a complete `project-contract.md` — nothing gets lost between stages.
+- **You stay in control.** Agents never contact a prospect without your approval, and they never invent facts. Hypotheses stay hypotheses. Prices, reviews and credentials stay real.
+- **Less rework, faster demos.** The designer produces a spec detailed enough that the developer builds it right the first time. You skip the "that's not what I meant" loop.
+- **Not another template site.** The system is conversion-first: every website defines a clear primary conversion and is designed for the specific business. Your demos feel intentional, not generic.
+- **Works with tools you already use.** Runs on [opencode](https://opencode.ai) — no enterprise stack, no license fees, no vendor lock-in. Open source under MIT.
 
 ## How it works
 
@@ -32,159 +51,115 @@ The system is designed for agencies and freelancers who want to turn a sales con
 └─────────────┘    └──────────────────┘    └───────────────┘    └─────────────┘    └──────────┘
 ```
 
-1. **Sales Agent** finds, researches and qualifies prospects, and maintains a `sales-contract.md` for each one.
-2. When a prospect wants to see a demo, the Sales Agent writes a **Design Handoff** (business and commercial context — not UI decisions).
-3. **Designer Agent** reads the handoff and produces `project-contract.md`, a complete, implementation-ready website specification.
-4. **Developer Agent** builds the functional website directly from `project-contract.md`, which is the only source of truth for UX/UI.
+1. **Sales Agent** researches and qualifies prospects, and keeps a `sales-contract.md` for each one.
+2. When a prospect asks for a demo, the Sales Agent writes a **Design Handoff** — business context, not UI decisions.
+3. **Designer Agent** reads the handoff and produces `project-contract.md`, a complete, build-ready specification.
+4. **Developer Agent** builds the functional website from that contract — the single source of truth for the design.
 
-## Agents
+## Who it's for
 
-### Sales Agent — `Agents/sales-agent.md`
+- **Freelancers** who want to look like a team and stop reinventing the process on every project.
+- **Agencies** that need consistent handoffs between sales, design and delivery.
+- **AI users** who want to generate websites with guardrails instead of chaos.
 
-A senior B2B sales strategist and sales copilot for selling websites to small and medium businesses.
+## See it in action
 
-- Prospects, researches and qualifies businesses
-- Maintains one `sales-contract.md` per prospect
-- Designs outreach and follow-up strategy and drafts the messages
-- Tracks conversations, objections and buying signals
-- Produces the **Design Handoff** when a demo is requested
-- The human always approves external communication
-
-### Designer Agent — `Agents/designer-agent.md`
-
-A conversion-focused web designer. Turns business context into a complete website specification.
-
-- Owns information architecture, UX, UI, visual direction, content strategy and responsive behavior
-- Produces `project-contract.md` with enough detail that the Developer Agent never has to make major design decisions
-- Never writes production code — `project-contract.md` is its only output
-- Never invents business facts, reviews, prices or credentials
-
-### Developer Agent — `Agents/developer-agent.md`
-
-A framework-agnostic senior web developer.
-
-- Builds the website described by `project-contract.md`
-- Treats the project contract as the single source of truth (the sales contract cannot override it)
-- Owns all technical decisions: stack, structure, styling, tooling
-- Chooses the simplest technology that delivers the required experience
-- Preserves design fidelity and documents any deviation from the contract
-
-## Contracts
-
-### `Contracts/sales-contract.md`
-
-The commercial source of truth for a single prospect. Maintained throughout the sales process. It covers:
-
-- Prospect profile and business research
-- Current digital presence assessment
-- Opportunity and commercial hypothesis
-- Qualification scoring
-- Outreach strategy and message history
-- Conversation log, objections and buying signals
-- Commercial status and next action
-- **Design Handoff** — the interface between the Sales Agent and the Designer Agent
-
-### `Contracts/project-contract.md`
-
-The authoritative website specification for a single project. It covers:
-
-- Business and project objective, primary and secondary conversions
-- Brand, positioning and visual direction
-- Design system (colors, typography, visual characteristics)
-- Website architecture and page specifications
-- Navigation, components, interactions and responsive behavior
-- Content and functional requirements
-- Assumptions and acceptance criteria
-
-## Design principles
-
-- **No invented facts.** Agents never invent reviews, prices, certifications, awards or performance claims. Hypotheses stay hypotheses.
-- **Conversion-first.** Every website must define a clear primary conversion.
-- **Clear role boundaries.** Each agent owns its stage and does not step into the next one.
-- **No over-engineering.** The developer uses the simplest technology that gets the job done.
-- **Human in control.** The human approves all external communication and commercial decisions.
-
-## Directory structure
+The Sales Agent is designed around real conversational commands. A session can look like this:
 
 ```
-Webeloper/
-├── Agents/
-│   ├── designer-agent.md    # Designs websites → writes project-contract.md
-│   ├── developer-agent.md   # Builds websites from project-contract.md
-│   └── sales-agent.md       # Prospects & sells → maintains sales-contract.md
-├── Contracts/
-│   ├── project-contract.md  # Implementation spec template (Designer's output)
-│   └── sales-contract.md    # Commercial spec template (Sales's output)
-└── logo.png                 # Project logo
+you:   find 10 gyms in Buenos Aires
+agent: discovers, researches and qualifies prospects, ranked with reasoning.
+
+you:   let's work on prospect #02
+agent: prepares its sales-contract.md and Design Handoff.
+
+you:   contact prospect #02
+agent: drafts the outreach message for your approval.
+
+you:   prospect #02 wants to see the site
+agent: updates the status to demo_requested and completes the Design Handoff.
 ```
 
-## Getting started
+Then the Designer Agent turns that handoff into `project-contract.md`, and the Developer Agent builds the demo. From "does someone want a website?" to "here's your website" — one pipeline, no context lost.
 
-Webeloper's agents are defined as [opencode](https://opencode.ai) markdown agents. You can use them with opencode or adapt them to any agent runtime that supports markdown agent definitions.
+## Get started in 3 steps
 
-### 1. Install the agents
+Requires [opencode](https://opencode.ai) (or any runtime that supports markdown agent definitions).
 
-Place the agent files in your opencode agents directory:
-
-- **Per project:** `.opencode/agents/`
-- **Globally:** `~/.config/opencode/agents/`
+**1. Install the agents**
 
 ```bash
-# per-project example
 mkdir -p .opencode/agents
 cp Agents/*.md .opencode/agents/
 ```
 
-### 2. Initialize the contracts
-
-Copy the contract templates into the project you are working on:
+**2. Copy the contract templates**
 
 ```bash
 cp Contracts/sales-contract.md .
 cp Contracts/project-contract.md .
 ```
 
-### 3. Run the pipeline
+**3. Open opencode and start**
 
-Open opencode in the project and drive the workflow with the agents:
+Pick a prospect, research it with the Sales Agent, and let the pipeline do the rest. The agents are designed so that you never have to hand-hold the process.
 
-- **Prospecting:** "find 10 gyms in Buenos Aires" → the Sales Agent discovers and qualifies prospects.
-- **Selecting a prospect:** "let's work on prospect #02" → the Sales Agent prepares its `sales-contract.md` and Design Handoff.
-- **Designing:** hand the Design Handoff to the Designer Agent → it produces `project-contract.md`.
-- **Building:** hand `project-contract.md` to the Developer Agent → it builds the functional website.
+## Project layout
 
-## Requirements
-
-- [opencode](https://opencode.ai) (or another runtime that supports markdown agent definitions)
-- A configured model provider
-- The `Contracts/` templates (start with the copies in this repo)
+```
+Webeloper/
+├── Agents/
+│   ├── sales-agent.md       # Prospects & sells → maintains sales-contract.md
+│   ├── designer-agent.md    # Designs websites → writes project-contract.md
+│   └── developer-agent.md   # Builds websites from project-contract.md
+├── Contracts/
+│   ├── sales-contract.md    # Commercial spec template (Sales's output)
+│   └── project-contract.md  # Implementation spec template (Designer's output)
+└── logo.png                 # Project logo
+```
 
 ## Contributing
 
-Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Ideas, improvements and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Support the project
 
-If Webeloper is useful to you, you can buy me a coffee or leave a tip:
+If Webeloper saves you time, buy me a coffee ☕
 
-- [Buy me a coffee on Cafecito](https://cafecito.app/mrnandz) ☕
-- [Support me on Ko-fi](https://ko-fi.com/mrnandz) ☕
+- [Cafecito](https://cafecito.app/mrnandz)
+- [Ko-fi](https://ko-fi.com/mrnandz)
 
-Any support helps keep improving the project. Thank you!
+Your support keeps the project alive and improving. Thank you!
 
 ## License
 
-This project is released under the [MIT License](LICENSE).
+MIT — see [LICENSE](LICENSE). Use it, share it, build on it.
 
 ---
 
 # Español (Latinoamérica)
 
-## ¿Qué es Webeloper?
+## ¿Por qué Webeloper?
 
-Webeloper es un conjunto de tres agentes de IA especializados y dos documentos de contrato que codifican el flujo de trabajo completo de una agencia web. Cada agente tiene un límite de rol claro, y cada contrato actúa como la única fuente de verdad para su etapa del proceso.
+Si hacés sitios web para clientes — como freelancer, agencia, o alguien que usa IA para avanzar más rápido — ya sabés cómo suele terminar:
 
-El sistema está pensado para agencias y freelancers que quieren convertir una conversación de ventas en una demo de sitio web para el cliente sin perder el control, sin inventar hechos ni perder tiempo en retrabajo.
+- Las conversaciones de ventas viven en chats dispersos y se pierden en cuanto pasás a construir.
+- El traspaso entre "lo que el cliente quiere" y "lo que se construye" es donde muere el contexto.
+- Los agentes de IA ayudan, pero sin reglas inventan hechos, se van del brief y producen resultados genéricos.
+- Cada proyecto parece empezar de cero. No hay proceso. Solo intuición y suerte.
+
+Webeloper arregla eso. Te da un **proceso repetible** para todo el ciclo de vida de una web de cliente — desde el primer mensaje de ventas hasta la demo terminada — con roles claros, contratos claros, y vos al control en cada paso.
+
+Tres agentes de IA, dos documentos de contrato, un pipeline: **Ventas → Diseño → Desarrollo**.
+
+## Lo que obtenés
+
+- **Un proceso real, no un comodín.** Cada etapa tiene un agente definido y un contrato que es la única fuente de verdad. Se acabó el caos entre "hablamos" y "entregamos".
+- **El contexto sobrevive.** El contexto comercial se captura en el `sales-contract.md`, se entrega a diseño y se convierte en un `project-contract.md` completo — nada se pierde entre etapas.
+- **Vos tenés el control.** Los agentes nunca contactan a un prospecto sin tu aprobación, y nunca inventan hechos. Las hipótesis siguen siendo hipótesis. Los precios, reseñas y credenciales siguen siendo reales.
+- **Menos retrabajo, demos más rápido.** El diseñador produce una especificación tan detallada que el desarrollador la construye bien a la primera. Te ahorrás el loop de "no era lo que quería decir".
+- **No es otro sitio plantilla.** El sistema es conversion-first: cada web define una conversión primaria clara y se diseña para el negocio específico. Tus demos se sienten intencionales, no genéricas.
+- **Funciona con herramientas que ya usás.** Corre sobre [opencode](https://opencode.ai) — sin stack empresarial, sin licencias, sin vendor lock-in. Código abierto con MIT.
 
 ## Cómo funciona
 
@@ -197,146 +172,86 @@ El sistema está pensado para agencias y freelancers que quieren convertir una c
 └───────────────┘    └──────────────────┘    └────────────────┘    └──────────────┘    └──────────┘
 ```
 
-1. El **Agente de Ventas** encuentra, investiga y califica prospectos, y mantiene un `sales-contract.md` para cada uno.
-2. Cuando un prospecto quiere ver una demo, el Agente de Ventas escribe un **Design Handoff** (contexto comercial y de negocio, no decisiones de UI).
-3. El **Agente de Diseño** lee el handoff y produce el `project-contract.md`, una especificación de sitio web completa y lista para implementar.
-4. El **Agente de Desarrollo** construye el sitio web funcional directamente desde `project-contract.md`, que es la única fuente de verdad para UX/UI.
+1. El **Agente de Ventas** investiga y califica prospectos, y mantiene un `sales-contract.md` para cada uno.
+2. Cuando un prospecto pide una demo, el Agente de Ventas escribe un **Design Handoff** — contexto de negocio, no decisiones de UI.
+3. El **Agente de Diseño** lee el handoff y produce el `project-contract.md`, una especificación completa y lista para construir.
+4. El **Agente de Desarrollo** construye el sitio funcional a partir de ese contrato — la única fuente de verdad del diseño.
 
-## Agentes
+## ¿Para quién es?
 
-### Agente de Ventas — `Agents/sales-agent.md`
+- **Freelancers** que quieren parecer un equipo y dejar de reinventar el proceso en cada proyecto.
+- **Agencias** que necesitan traspasos consistentes entre ventas, diseño y entrega.
+- **Usuarios de IA** que quieren generar webs con reglas en vez de caos.
 
-Un estratega senior de ventas B2B y copiloto de ventas para vender sitios web a pequeñas y medianas empresas.
+## Míralo en acción
 
-- Prospecta, investiga y califica negocios
-- Mantiene un `sales-contract.md` por prospecto
-- Diseña la estrategia de outreach y follow-up y redacta los mensajes
-- Lleva el registro de conversaciones, objeciones y señales de compra
-- Produce el **Design Handoff** cuando se solicita una demo
-- El humano siempre aprueba la comunicación externa
-
-### Agente de Diseño — `Agents/designer-agent.md`
-
-Un diseñador web enfocado en conversión. Convierte el contexto de negocio en una especificación completa del sitio.
-
-- Es dueño de la arquitectura de información, UX, UI, dirección visual, estrategia de contenido y comportamiento responsive
-- Produce el `project-contract.md` con suficiente detalle para que el Agente de Desarrollo nunca tenga que tomar decisiones de diseño importantes
-- Nunca escribe código de producción — `project-contract.md` es su única salida
-- Nunca inventa hechos de negocio, reseñas, precios ni credenciales
-
-### Agente de Desarrollo — `Agents/developer-agent.md`
-
-Un desarrollador web senior agnóstico de frameworks.
-
-- Construye el sitio web descrito por `project-contract.md`
-- Trata el contrato de proyecto como la única fuente de verdad (el contrato de ventas no puede anularlo)
-- Es dueño de todas las decisiones técnicas: stack, estructura, estilos y herramientas
-- Elige la tecnología más simple que entregue la experiencia requerida
-- Preserva la fidelidad del diseño y documenta cualquier desviación del contrato
-
-## Contratos
-
-### `Contracts/sales-contract.md`
-
-La fuente de verdad comercial para un solo prospecto. Se mantiene a lo largo de todo el proceso de ventas. Cubre:
-
-- Perfil del prospecto e investigación del negocio
-- Evaluación de la presencia digital actual
-- Oportunidad e hipótesis comercial
-- Puntaje de calificación
-- Estrategia de outreach e historial de mensajes
-- Registro de conversaciones, objeciones y señales de compra
-- Estado comercial y próxima acción
-- **Design Handoff** — la interfaz entre el Agente de Ventas y el Agente de Diseño
-
-### `Contracts/project-contract.md`
-
-La especificación autoritativa del sitio web para un solo proyecto. Cubre:
-
-- Objetivo del negocio y del proyecto, conversión primaria y secundaria
-- Marca, posicionamiento y dirección visual
-- Sistema de diseño (colores, tipografía, características visuales)
-- Arquitectura del sitio y especificaciones de cada página
-- Navegación, componentes, interacciones y comportamiento responsive
-- Requisitos de contenido y funcionalidad
-- Supuestos y criterios de aceptación
-
-## Principios de diseño
-
-- **Sin hechos inventados.** Los agentes nunca inventan reseñas, precios, certificaciones, premios ni afirmaciones de resultados. Las hipótesis siguen siendo hipótesis.
-- **Primero la conversión.** Cada sitio web debe definir una conversión primaria clara.
-- **Límites de rol claros.** Cada agente es dueño de su etapa y no interviene en la siguiente.
-- **Sin sobre-ingeniería.** El desarrollador usa la tecnología más simple que resuelve el trabajo.
-- **El humano al control.** El humano aprueba toda la comunicación externa y las decisiones comerciales.
-
-## Estructura del proyecto
+El Agente de Ventas está pensado con comandos conversacionales reales. Una sesión puede verse así:
 
 ```
-Webeloper/
-├── Agents/
-│   ├── designer-agent.md    # Diseña sitios web → escribe project-contract.md
-│   ├── developer-agent.md   # Construye sitios web desde project-contract.md
-│   └── sales-agent.md       # Prospecta y vende → mantiene sales-contract.md
-├── Contracts/
-│   ├── project-contract.md  # Plantilla de especificación de implementación (salida del Diseñador)
-│   └── sales-contract.md    # Plantilla de especificación comercial (salida de Ventas)
-└── logo.png                 # Logo del proyecto
+vos:   encontrá 10 gimnasios en Buenos Aires
+agente: descubre, investiga y califica prospectos, ordenados con su razonamiento.
+
+vos:   hagamos el 02
+agente: prepara su sales-contract.md y el Design Handoff.
+
+vos:   contactemos al 02
+agente: redacta el mensaje de outreach para tu aprobación.
+
+vos:   el 02 pidió ver la web
+agente: actualiza el estado a demo_requested y completa el Design Handoff.
 ```
 
-## Primeros pasos
+Después el Agente de Diseño convierte ese handoff en `project-contract.md`, y el Agente de Desarrollo construye la demo. De "¿alguien quiere una web?" a "acá tenés tu web" — un solo pipeline, sin perder contexto.
 
-Los agentes de Webeloper están definidos como agentes markdown de [opencode](https://opencode.ai). Puedes usarlos con opencode o adaptarlos a cualquier runtime de agentes que soporte definiciones de agentes en markdown.
+## Primeros pasos en 3 pasos
 
-### 1. Instalar los agentes
+Requiere [opencode](https://opencode.ai) (o cualquier runtime que soporte definiciones de agentes en markdown).
 
-Coloca los archivos de los agentes en tu directorio de agentes de opencode:
-
-- **Por proyecto:** `.opencode/agents/`
-- **Globalmente:** `~/.config/opencode/agents/`
+**1. Instalá los agentes**
 
 ```bash
-# ejemplo por proyecto
 mkdir -p .opencode/agents
 cp Agents/*.md .opencode/agents/
 ```
 
-### 2. Inicializar los contratos
-
-Copia las plantillas de contrato al proyecto en el que estás trabajando:
+**2. Copiá las plantillas de contratos**
 
 ```bash
 cp Contracts/sales-contract.md .
 cp Contracts/project-contract.md .
 ```
 
-### 3. Ejecutar el pipeline
+**3. Abrí opencode y empezá**
 
-Abre opencode en el proyecto y maneja el flujo con los agentes:
+Elegí un prospecto, investigalo con el Agente de Ventas, y dejá que el pipeline haga el resto. Los agentes están diseñados para que no tengas que llevar el proceso de la mano.
 
-- **Prospección:** "encontrá 10 gimnasios en Buenos Aires" → el Agente de Ventas descubre y califica prospectos.
-- **Seleccionar un prospecto:** "hacemos el 02" → el Agente de Ventas prepara su `sales-contract.md` y el Design Handoff.
-- **Diseñar:** pasale el Design Handoff al Agente de Diseño → produce el `project-contract.md`.
-- **Desarrollar:** pasale el `project-contract.md` al Agente de Desarrollo → construye el sitio web funcional.
+## Estructura del proyecto
 
-## Requisitos
-
-- [opencode](https://opencode.ai) (u otro runtime que soporte definiciones de agentes en markdown)
-- Un proveedor de modelos configurado
-- Las plantillas de `Contracts/` (empieza con las copias de este repo)
+```
+Webeloper/
+├── Agents/
+│   ├── sales-agent.md       # Prospecta y vende → mantiene sales-contract.md
+│   ├── designer-agent.md    # Diseña sitios web → escribe project-contract.md
+│   └── developer-agent.md   # Construye sitios web desde project-contract.md
+├── Contracts/
+│   ├── sales-contract.md    # Plantilla de especificación comercial (salida de Ventas)
+│   └── project-contract.md  # Plantilla de especificación de implementación (salida del Diseñador)
+└── logo.png                 # Logo del proyecto
+```
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas. Consulta [CONTRIBUTING.md](CONTRIBUTING.md) para las pautas.
+Ideas, mejoras y pull requests son bienvenidas. Consultá [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Apoya el proyecto
+## Apoyá el proyecto
 
-Si Webeloper te resulta útil, puedes invitarme un cafecito o una propina:
+Si Webeloper te ahorra tiempo, invitame un cafecito ☕
 
-- [Invítame un cafecito en Cafecito](https://cafecito.app/mrnandz) ☕
-- [Apóyame en Ko-fi](https://ko-fi.com/mrnandz) ☕
+- [Cafecito](https://cafecito.app/mrnandz)
+- [Ko-fi](https://ko-fi.com/mrnandz)
 
-Cualquier aporte ayuda a seguir mejorando el proyecto. ¡Gracias!
+Tu apoyo mantiene el proyecto vivo y mejorando. ¡Gracias!
 
 ## Licencia
 
-Este proyecto se publica bajo la [Licencia MIT](LICENSE).
+MIT — ver [LICENSE](LICENSE). Usalo, compartilo, construí sobre él.
