@@ -56,6 +56,15 @@
 * Display:
 * Body:
 
+### Tokens
+
+All values must be exact: hex codes, font names, pixel sizes, weights,
+line-heights. No qualitative descriptions in place of values.
+
+* Spacing scale:
+* Border radius:
+* Breakpoints (mobile / tablet / desktop):
+
 ### Visual Characteristics
 
 Describe:
@@ -195,6 +204,9 @@ Specify:
 * placeholders.
 
 Generated demo content must be realistic but must not present invented claims as verified facts.
+
+Tag each content item inline with `[VERIFIED]`, `[ASSUMPTION]`,
+`[PROPOSED]`, or `[NEEDS CONFIRMATION]`.
 
 ---
 

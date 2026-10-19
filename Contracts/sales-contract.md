@@ -104,6 +104,22 @@
 
 ## 5. Qualification
 
+### Scorecard (0–5 each)
+
+| Dimension | Score (0–5) | Weight | Justification |
+| --- | --- | --- | --- |
+| Website gap | | 0.30 | |
+| Conversion opportunity | | 0.25 | |
+| Commercial potential | | 0.20 | |
+| Fit for a demo | | 0.15 | |
+| Accessibility of decision-maker | | 0.10 | |
+
+**Weighted total:** `score = Σ (dimension × weight)`
+
+**Opportunity score (1–10):** `1 + (score / 5) × 9`, rounded to 1 decimal
+
+### Summary
+
 **Opportunity score:** 1–10
 
 **Website opportunity:** low / medium / high
@@ -118,6 +134,15 @@
 
 ### Reasoning
 
+...
+
+### Outcome (filled after cycle ends)
+
+**Result:** won / lost / paused / unknown
+
+**Lost reason (if any):** ...
+
+**Scorecard accuracy note:** Did the score predict the outcome?
 ...
 
 ---
@@ -207,6 +232,9 @@
 ---
 
 ## 9. Commercial Status
+
+> Allowed statuses and transitions are defined in the Sales Agent's
+> Commercial Status Machine. Update this field only via a legal transition.
 
 **Status:**
 - discovered
