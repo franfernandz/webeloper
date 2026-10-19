@@ -39,6 +39,7 @@ Three AI agents, two contract documents, one pipeline: **Sales → Design → Bu
 - **You stay in control.** Agents research, qualify and draft communications, but they never perform external outreach without human approval. Facts must be verifiable, and hypotheses remain explicitly hypotheses.
 - **Less rework, faster demos.** The designer produces a spec detailed enough that the developer builds it right the first time. You skip the "that's not what I meant" loop.
 - **Not another template site.** The system is conversion-first: every website defines a clear primary conversion and is designed for the specific business. Your demos feel intentional, not generic.
+- **Design judgment, enforced.** The `design-judgment` skill makes the Designer Agent earn every visual decision. It rejects statistical defaults, requires a written visual thesis, forces three genuinely different directions before choosing, and demands evidence behind each contract decision.
 - **Works with tools you already use.** Runs on [opencode](https://opencode.ai) — no enterprise stack, no license fees, no vendor lock-in. Open source under MIT.
 
 ## What Webeloper is not
@@ -65,7 +66,7 @@ It is a multi-agent work process with defined roles, explicit contracts and huma
 
 1. **Sales Agent** researches and qualifies prospects, and keeps a `sales-contract.md` for each one.
 2. When a prospect asks for a demo, the Sales Agent writes a **Design Handoff** — business context, not UI decisions.
-3. **Designer Agent** reads the handoff and produces `project-contract.md`, a complete, build-ready specification.
+3. **Designer Agent** reads the handoff and produces `project-contract.md`, a complete, build-ready specification. The `design-judgment` skill governs this stage: visual thesis, three explored directions, and a reason behind every decision.
 4. **Developer Agent** builds the functional website from that contract — the single source of truth for the design.
 
 ## Who it's for
@@ -94,7 +95,7 @@ agent: updates the status to demo_requested and completes the Design Handoff.
 
 Then the Designer Agent turns that handoff into `project-contract.md`, and the Developer Agent builds the demo. From "does someone want a website?" to "here's your website" — one pipeline, no context lost.
 
-## Get started in 3 steps
+## Get started in 4 steps
 
 Requires [opencode](https://opencode.ai) (or any runtime that supports markdown agent definitions).
 
@@ -112,7 +113,14 @@ cp Contracts/sales-contract.md .
 cp Contracts/project-contract.md .
 ```
 
-**3. Open opencode and start**
+**3. Install the design skill**
+
+```bash
+mkdir -p .opencode/skills
+cp -r Skills/design-judgment .opencode/skills/
+```
+
+**4. Open opencode and start**
 
 Pick a prospect, research it with the Sales Agent, and let the pipeline do the rest. The agents are designed so that you never have to hand-hold the process.
 
@@ -127,6 +135,10 @@ Webeloper/
 ├── Contracts/
 │   ├── sales-contract.md    # Commercial spec template (Sales's output)
 │   └── project-contract.md  # Implementation spec template (Designer's output)
+├── Skills/
+│   └── design-judgment/     # Forces deliberate art direction over defaults
+│       ├── SKILL.md
+│       └── rules/           # The five criteria (a–e)
 └── logo.png                 # Project logo
 ```
 
@@ -171,6 +183,7 @@ Tres agentes de IA, dos documentos de contrato, un pipeline: **Ventas → Diseñ
 - **Vos tenés el control.** Los agentes investigan, califican y redactan comunicaciones, pero nunca realizan outreach externo sin aprobación humana. Los hechos deben ser verificables y las hipótesis permanecen explícitamente como hipótesis.
 - **Menos retrabajo, demos más rápido.** El diseñador produce una especificación tan detallada que el desarrollador la construye bien a la primera. Te ahorrás el loop de "no era lo que quería decir".
 - **No es otro sitio plantilla.** El sistema es conversion-first: cada web define una conversión primaria clara y se diseña para el negocio específico. Tus demos se sienten intencionales, no genéricas.
+- **Criterio de diseño, garantizado.** La skill `design-judgment` obliga al Agente de Diseño a ganarse cada decisión visual. Rechaza los patrones por defecto, exige una tesis visual escrita, fuerza tres direcciones realmente distintas antes de elegir, y pide evidencia detrás de cada decisión del contrato.
 - **Funciona con herramientas que ya usás.** Corre sobre [opencode](https://opencode.ai) — sin stack empresarial, sin licencias, sin vendor lock-in. Código abierto con MIT.
 
 ## Lo que Webeloper no es
@@ -198,7 +211,7 @@ Es un proceso de trabajo multiagente con roles definidos, contratos explícitos 
 
 1. El **Agente de Ventas** investiga y califica prospectos, y mantiene un `sales-contract.md` para cada uno.
 2. Cuando un prospecto pide una demo, el Agente de Ventas escribe un **Design Handoff** — contexto de negocio, no decisiones de UI.
-3. El **Agente de Diseño** lee el handoff y produce el `project-contract.md`, una especificación completa y lista para construir.
+3. El **Agente de Diseño** lee el handoff y produce el `project-contract.md`, una especificación completa y lista para construir. La skill `design-judgment` gobierna esta etapa: tesis visual, tres direcciones exploradas y un motivo detrás de cada decisión.
 4. El **Agente de Desarrollo** construye el sitio funcional a partir de ese contrato — la única fuente de verdad del diseño.
 
 ## ¿Para quién es?
@@ -227,7 +240,7 @@ agente: actualiza el estado a demo_requested y completa el Design Handoff.
 
 Después el Agente de Diseño convierte ese handoff en `project-contract.md`, y el Agente de Desarrollo construye la demo. De "¿alguien quiere una web?" a "acá tenés tu web" — un solo pipeline, sin perder contexto.
 
-## Primeros pasos en 3 pasos
+## Primeros pasos en 4 pasos
 
 Requiere [opencode](https://opencode.ai) (o cualquier runtime que soporte definiciones de agentes en markdown).
 
@@ -245,7 +258,14 @@ cp Contracts/sales-contract.md .
 cp Contracts/project-contract.md .
 ```
 
-**3. Abrí opencode y empezá**
+**3. Instalá la skill de diseño**
+
+```bash
+mkdir -p .opencode/skills
+cp -r Skills/design-judgment .opencode/skills/
+```
+
+**4. Abrí opencode y empezá**
 
 Elegí un prospecto, investigalo con el Agente de Ventas, y dejá que el pipeline haga el resto. Los agentes están diseñados para que no tengas que llevar el proceso de la mano.
 
@@ -260,6 +280,10 @@ Webeloper/
 ├── Contracts/
 │   ├── sales-contract.md    # Plantilla de especificación comercial (salida de Ventas)
 │   └── project-contract.md  # Plantilla de especificación de implementación (salida del Diseñador)
+├── Skills/
+│   └── design-judgment/     # Obliga una dirección de arte deliberada en vez de defaults
+│       ├── SKILL.md
+│       └── rules/           # Los cinco criterios (a–e)
 └── logo.png                 # Logo del proyecto
 ```
 
