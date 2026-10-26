@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `Skills/design-judgment/`: new skill that forces deliberate,
+  project-specific art direction instead of statistical defaults. Contains
+  `SKILL.md` (mandatory workflow) and five criteria rule files: `a-no-defaults`,
+  `b-visual-thesis`, `c-alternatives`, `d-evidence`, `e-constraint-hierarchy`.
+- `README.md`: documents the `design-judgment` skill in "What you get", the
+  design step, the project layout, and a new installation step (both English
+  and Spanish).
+
 ## [0.3.0] - 2026-10-19
 
 ### Added
